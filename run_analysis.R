@@ -92,5 +92,5 @@ alldata_final <-
     alldata_lean[, list(mean(value)), by = c("Activity", "Subject", "variable")]
 newnames <- c("Activity", "Subject", "Feature_Name", "Feature_Average_Value")
 setnames(alldata_final, colnames(alldata_final), newnames)
-write.table(alldata_final, "tidy.txt")
+write.table(alldata_final, "tidy.txt", row.name=FALSE)
 
